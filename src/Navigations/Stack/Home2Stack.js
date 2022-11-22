@@ -4,12 +4,13 @@
 import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Screens from '../../Screens';
-import * as Component from '../../Components';
+// import * as Component from '../../Components';
 import Op1Stack  from './Op1Stack';
 import Op2Stack  from './Op2Stack';
 import Op3Stack  from './Op3Stack';
 import Op4Stack  from './Op4Stack';
 import Op5Stack  from './Op5Stack';
+import OptionsHeader  from '../../Components/header/OptionsHeader';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +21,7 @@ function Option1() {
         name="Home2"
         options={{
           header: ({ navigation }) => (
-            <Component.Header.OptionsHeader name={'التشخيص'}  navigation={navigation} showIcon={true} />
+            <OptionsHeader name={'التشخيص'}  navigation={navigation} showIcon={true} />
           ),
         }}
         component={Screens.Dashobard.Home.Home2}

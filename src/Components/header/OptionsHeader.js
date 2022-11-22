@@ -8,7 +8,7 @@ import SettingIcon from '../../assets/images/Icon-feather-settings.svg';
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 
-function OptionsHeader({ navigation, name, showIcon, icon }) {
+const  OptionsHeader =({ navigation, name, showIcon, icon })=> {
   return (
     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
       {icon == null ? <TouchableOpacity onPress={() => navigation.goBack()}>

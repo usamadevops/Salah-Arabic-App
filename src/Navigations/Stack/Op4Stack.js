@@ -4,7 +4,8 @@
 import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Screens from '../../Screens';
-import * as Component from '../../Components';
+// import * as Component from '../../Components';
+import OptionsHeader  from '../../Components/header/OptionsHeader';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,7 @@ export default function Op4Stack(){
         name="Op1"
         options={{
           header: ({ navigation }) => (
-            <Component.Header.OptionsHeader name={'التشخيص'}  navigation={navigation}/>
+            <OptionsHeader name={'التشخيص'}  navigation={navigation}/>
           ),
         }}
         component={Screens.Dashobard.Options.Op4.Op4}

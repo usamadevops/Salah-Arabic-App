@@ -14,9 +14,10 @@ function App() {
     <Stack.Navigator>
       <Stack.Screen
         options={{
-          header: ({ navigation }) => (
-            <OptionsHeader name={'الصفحة الرئيسية'} navigation={navigation} icon={true} showIcon={true} />
-          ),
+          header: ({ navigation }) => {
+            return <OptionsHeader name={'الصفحة الرئيسية'} navigation={navigation} icon={true} showIcon={true} />;
+          },
+          // headerShown:false
         }}
         name="Home1" component={Screens.Dashobard.Home.Home1} 
         />

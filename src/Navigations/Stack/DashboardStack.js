@@ -17,7 +17,6 @@ function App() {
           header: ({ navigation }) => {
             return <OptionsHeader name={'الصفحة الرئيسية'} navigation={navigation} icon={true} showIcon={true} />;
           },
-          // headerShown:false
         }}
         name="Home1" component={Screens.Dashobard.Home.Home1} 
         />

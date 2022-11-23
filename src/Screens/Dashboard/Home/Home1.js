@@ -1,17 +1,15 @@
 /* eslint-disable prettier/prettier */
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Home1 = ({navigation}) => {
   return (
-    <View style={styles.container}>
-      <Text>Home1</Text>
-      <TouchableOpacity
-      onPress={()=>navigation.navigate('Home2Stack')}
-      >
-        <Text>Home2</Text>
-      </TouchableOpacity>
-    </View>
+    <SafeAreaView style={styles.container}>
+     <TouchableOpacity onPress={()=>navigation.navigate('Home2Stack')}>
+      <Text>Home2</Text>
+     </TouchableOpacity>
+    </SafeAreaView>
   );
 };
 

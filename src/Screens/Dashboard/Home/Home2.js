@@ -13,7 +13,6 @@ import Op3 from '../../../assets/images/ما هي الرائحة.svg';
 import Op4 from '../../../assets/images/ما هو شعورك؟.svg';
 import Op5 from '../../../assets/images/لن تبدأ السيارة؟.svg';
 import colors from '../../../Contants/colors';
-// import {SvgXml} from 'react-native-svg';
 
 const screenWidth = Dimensions.get('screen').width * 0.9;
 const screenHeight = Dimensions.get('screen').height * 0.13;
@@ -49,7 +48,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'flex-end',
-    // justifyContent: 'center',
     flexDirection: 'column',
     paddingHorizontal: 10,
   },

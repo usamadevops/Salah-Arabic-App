@@ -1,7 +1,14 @@
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export const List = () => {
+export const TutorialList = () => {
   return (
-    <div>List</div>
+    <View>
+      <Text>List</Text>
+    </View>
   )
 }
+
+
+
+const styles = StyleSheet.create({})

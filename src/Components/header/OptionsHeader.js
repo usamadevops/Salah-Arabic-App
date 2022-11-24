@@ -10,19 +10,28 @@ const screenWidth = Dimensions.get('screen').width;
 
 const  OptionsHeader =({ navigation, name, showIcon, icon })=> {
   return (
-    <SafeAreaView style={{ flexDirection: 'row',height:110, alignItems: 'center' }}>
-      {icon == null ? <TouchableOpacity onPress={() => navigation.goBack()}>
+    <SafeAreaView style={{ flexDirection: 'row', alignItems: 'center',justifyContent:"space-evenly",backgroundColor:'#FEFDFD' }}>
+      {icon !== null ?
+       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Entypoo icon={'chevron-small-left'} color={'gray'} size={45} />
-      </TouchableOpacity> :<View style={{marginLeft:15}}/>}
+      </TouchableOpacity> :<View style={{marginLeft:15}}/>
+      }
+      <View style={{flex:3}}>
+
       <Image source={require('../../assets/images/Group71.png')} />
-      <Text
-        style={{ left: 50, fontSize: 20, color: 'black' }}>
+      </View>
+    
+    <View style={{flex:3}}>
+        <Text
+        style={{ fontSize: 18, color: 'black' }}>
         {name}
       </Text>
+      </View>
       {showIcon ?
-        <TouchableOpacity style={{ marginHorizontal: screenWidth * 0.32 }}>
+        <TouchableOpacity style={{flex:1}}>
           <SettingIcon height={24} width={24} />
-        </TouchableOpacity> : null}
+        </TouchableOpacity> : <></>
+        }
     </SafeAreaView>
   );
 }

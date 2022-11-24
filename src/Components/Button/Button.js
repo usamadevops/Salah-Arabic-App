@@ -9,37 +9,51 @@ import colors from '../../Contants/colors';
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 
-export default function Button({ navigation, name, screen,alert, subtitle,questions,fontSize,width ,icon}) {
+export default function Button({ navigation, name, screen, alert, subtitle, questions, fontSize, width, icon }) {
     return (
         <TouchableOpacity style={styles.main} onPress={() => {
-            if(questions===undefined){
-                Alert.alert(alert['text']);
+            if (questions === undefined) {
+                Alert.alert(
+                    alert['text'],
+                    [
+                        {
+                            text: alert['btntext'],
+                            onPress: () => console.log("Cancel Pressed"),
+                            style: "cancel",
+                            AlertButtonStyle: "cancel"
+                        },
+
+                    ],
+                    AlertType = "plain-text",
+                );
             }
-            else{
-            navigation.push(screen,{
-            title:name,
-            icon:icon,
-            subtitle:subtitle,
-            data:questions,
-        })}}}>
+            else {
+                navigation.push(screen, {
+                    title: name,
+                    icon: icon,
+                    subtitle: subtitle,
+                    data: questions,
+                })
+            }
+        }}>
             <View style={styles.icons}>
-                <View style={{marginRight:10}}>
-                <AntDesigne icon={'caretleft'} color={colors.prinamry} size={18}  />
+                <View style={{ marginRight: 10 }}>
+                    <AntDesigne icon={'caretleft'} color={colors.prinamry} size={18} />
                 </View>
                 {
-                    icon!==null && <SettingIcon height={35} width={35} />
+                    icon !== null && <SettingIcon height={35} width={35} />
                 }
-                
+
             </View>
-            <View style={{ flex:1,  alignItems: 'flex-end', justifyContent:'center', paddingVertical:13}}>
-          
+            <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center', paddingVertical: 6 }}>
+
                 <Text
-                    style={{ flex:1,fontSize: fontSize || 14, fontWeight: 'bold', color: '#8F8E8E', right: screenWidth * 0.1, alignItems: 'flex-end',width:width||null }}>
+                    style={{ flex: 1, fontSize: fontSize || 14, fontWeight: 'bold', color: '#8F8E8E', right: screenWidth * 0.1, alignItems: 'flex-end', width: width || null }}>
                     {name}
                 </Text>
-                
-            
-</View>
+
+
+            </View>
         </TouchableOpacity>
     );
 }

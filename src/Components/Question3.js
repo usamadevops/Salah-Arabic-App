@@ -20,7 +20,7 @@ const Questions = ({ navigation, route }) => {
         <View style={{ marginRight: screenWidth * 0.6 }}>
           <Text style={styles.title}>ماذا ترى؟</Text>
         </View>
-        <Text style={styles.heading}>{subtitle}</Text>
+        <Text style={styles.heading}>{title ||subtitle}</Text>
         {data && data.map((q, index) => {
           return (
             <View key={index}>

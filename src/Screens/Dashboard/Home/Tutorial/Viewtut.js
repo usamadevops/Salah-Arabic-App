@@ -1,7 +1,13 @@
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export const Viewtut = () => {
+export const Viewtutorial = () => {
   return (
-    <div>Viewtut</div>
+    <View>
+      <Text>Viewtutorial</Text>
+    </View>
   )
 }
+
+
+const styles = StyleSheet.create({})

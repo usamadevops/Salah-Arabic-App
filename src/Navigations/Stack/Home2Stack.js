@@ -21,7 +21,7 @@ function Option1() {
         name="Home2"
         options={{
           header: ({ navigation }) => (
-            <OptionsHeader name={'التشخيص'}  navigation={navigation} showIcon={true} />
+            <OptionsHeader name={'التشخيص'}  navigation={navigation} showIcon={true} icon={'back'} />
           ),
         }}
         component={Screens.Dashobard.Home.Home2}

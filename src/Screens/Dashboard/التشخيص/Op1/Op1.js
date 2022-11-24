@@ -5,7 +5,6 @@ import React from 'react';
 import * as Component from '../../../../Components';
 import colors from '../../../../Contants/colors';
 import see from '../../../../data/see.json';
-
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 const Op1 = ({ navigation }) => {

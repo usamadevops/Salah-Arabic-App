@@ -1,20 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import colors from '../../../Contants/colors';
 import * as Components from '../../../Components';
 import {Authorize} from '../../../redux/Modules/Auth';
 const SplashScreen = ({ navigation }) => {
-    const [userName, setName] = useState('');
     const dispatch = useDispatch();
-
-    useEffect(() => {
-        setTimeout(() => navigation.navigate('LoginScreen'), 10000);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
     return (
         <View style={styles.container}>
             <View style={{ position: 'absolute', flexDirection: 'row', }}>

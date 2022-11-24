@@ -13,33 +13,23 @@ import {
   const Questions4 = ({ navigation,title,subtitle,questions,route }) => {
     const {data}=route.params;
     return (
-      <ScrollView style={{flex:1}}>
-      
-        <View style={styles.container}>
-        <View style={{marginRight:screenWidth * 0.1}}>
+      <ScrollView style={{ flex: 1 }}>
+
+      <View style={styles.container}>
+        <View style={{ marginRight: screenWidth * 0.6 }}>
           <Text style={styles.title}>ماذا ترى؟</Text>
-         
         </View>
-          { data && data.map((q,index)=>{
-            return(
-              <View>
-              <Text style={styles.heading}>{q.text}</Text>
-  {
-  q.questions_3 &&  q.questions_3.map((q1,index2)=>{
-   
-      return(
-        <View key={index2}>
-  <Component.Button.Button name={q1.text} questions={q1} navigation={navigation} screen={'questions3'} icon={q1.icon} />
-  </View>
-      )
-    })
-  
-  }
-  </View>
-            )
-          })}
-        </View>
-      </ScrollView>
+        <Text style={styles.heading}>{title ||subtitle}</Text>
+        {data && data.map((q, index) => {
+          return (
+            <View key={index}>
+              <Component.Button.Button name={q.text} questions={q.questions_4} subtitle={q.Subtitle} navigation={navigation} alert={q.alert} screen={'questions3'} icon={q.icon} />
+            </View>
+          )
+        })}
+
+      </View>
+    </ScrollView>
     );
   };
   

@@ -59,9 +59,10 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     right: '45%',
+    top:10,
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 40,
-    color: colors.background,
+    color: '#8F8E8E50',
   },
 });

@@ -1,10 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-
-export const TutorialList = () => {
+import { TutorialData } from '../../../../data/Tutorial';
+export const TutorialList = ({navigation}) => {
   return (
-    <View>
-      <Text>List</Text>
+    <View style={{ flex: 1, padding: 20,flexDirection:'row',flexWrap:"wrap" }}>
+      {/* Card Layout */}
+      {TutorialData.map((items, index) => {
+        return (
+          <TouchableOpacity style={{ width: '44%',  backgroundColor: "#CF5300", borderRadius: 10 ,margin:10,padding:10,alignItems:'center',justifyContent:"center"}}
+          onPress={()=>navigation.navigate('viewtutorial',{
+            data:items
+          })}
+          key={index}
+          >
+            <View style={{marginBottom:4}}>
+              {items.pic}
+            </View>
+            <Text style={{color:'#fff',fontWeight:'bold',fontSize:16}}>
+              {items.heading}
+            </Text>
+          </TouchableOpacity>
+        )
+      })}
     </View>
   )
 }

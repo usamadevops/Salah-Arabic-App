@@ -53,6 +53,6 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 40,
-    color: colors.background,
+    color: '#8F8E8E',
   },
 });

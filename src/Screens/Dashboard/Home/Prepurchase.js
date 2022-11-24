@@ -9,8 +9,8 @@ export const Prepurchase = () => {
   const ref = React.useRef(null);
   const Footer = () => {
     return (
-      <View style={{ flex: 1, marginBottom: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20 }}>
-        <View style={{flex: 1 }}>
+      <View style={{marginBottom: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', }}>
+        <View style={{flex: 1,left:50 }}>
           {
             currentSlideIndex != 0 ? (
               <Pressable onPress={() => PreviousSlide()}>

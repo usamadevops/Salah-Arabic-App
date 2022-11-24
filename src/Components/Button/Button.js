@@ -1,8 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import { View, Text, TouchableOpacity, Dimensions, StyleSheet, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, Dimensions, StyleSheet, Alert, Platform } from 'react-native';
 import React from 'react';
 import { AntDesigne } from '../../Contants/Icon';
+import Backfill from '../../assets/svg/fillback.svg';
 import SettingIcon from '../../assets/images/GearIcon.svg';
 import colors from '../../Contants/colors';
 
@@ -14,17 +15,18 @@ export default function Button({ navigation, name, screen, alert, subtitle, ques
         <TouchableOpacity style={styles.main} onPress={() => {
             if (questions === undefined) {
                 Alert.alert(
-                    alert['text'],
-                    [
-                        {
-                            text: alert['btntext'],
-                            onPress: () => console.log("Cancel Pressed"),
-                            style: "cancel",
-                            AlertButtonStyle: "cancel"
+                 alert.text,
+                    "",
+                       [ {
+                          text: "موافق",
+                          style: "default",
                         },
-
-                    ],
-                    AlertType = "plain-text",
+                        {
+                            text: "                                                                     ",
+                            style: "default",   
+                          }
+                    ]
+                      
                 );
             }
             else {
@@ -38,14 +40,15 @@ export default function Button({ navigation, name, screen, alert, subtitle, ques
         }}>
             <View style={styles.icons}>
                 <View style={{ marginRight: 10 }}>
-                    <AntDesigne icon={'caretleft'} color={colors.prinamry} size={18} />
+                    <Backfill />
+                    {/* <AntDesigne icon={'caretleft'} color={colors.prinamry} size={18} /> */}
                 </View>
                 {
                     icon !== null && <SettingIcon height={35} width={35} />
                 }
 
             </View>
-            <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center', paddingVertical: 6 }}>
+            <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center', paddingVertical: Platform.OS === 'ios' ? 8 : 16 }}>
 
                 <Text
                     style={{ flex: 1, fontSize: fontSize || 14, fontWeight: 'bold', color: '#8F8E8E', right: screenWidth * 0.1, alignItems: 'flex-end', width: width || null }}>

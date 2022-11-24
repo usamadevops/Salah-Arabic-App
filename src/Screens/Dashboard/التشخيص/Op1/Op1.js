@@ -4,47 +4,23 @@ import { View, Text, FlatList, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
 import * as Component from '../../../../Components';
 import colors from '../../../../Contants/colors';
+import see from '../../../../data/see.json';
 
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 const Op1 = ({ navigation }) => {
-  const data = [
-    {
-      name: 'بخار',
-      screen: 'بخار'
-    },
-    {
-      name: 'ارتفاع درجة حرارة المحرك',
-      screen: 'ارتفاع درجة حرارة المحرك'
-    },
-    {
-      name: 'ضوء التحذير',
-      screen: 'ضوء التحذير'
-    },
-    {
-      name: 'إطار متآكل',
-      screen: 'إطار متآكل'
-    },
-    {
-      name: 'استهلاك عالي للوقود',
-      screen: 'استهلاك عالي للوقود'
-    },
-    {
-      name: 'دخان',
-      screen: 'دخان'
-    },
-  ];
   const renderitem = ({ item }) => {
-    return <Component.Button.Button name={item.name} navigation={navigation} screen={item.screen} />;
+    return <Component.Button.Button name={item.title} navigation={navigation} questions={item.questions_1} alert={item.alert} subtitle={item.Subtitle} screen={'questions'} />;
   }
   return (
+   
     <View style={styles.container}>
       <View style={{marginRight:screenWidth * 0.1}}>
         <Text style={styles.title}>ماذا ترى؟</Text>
-        <Text style={styles.heading}>ما نوع الأعراض التي تعانيها؟</Text>
+        <Text style={styles.heading}>{see.header}</Text>
       </View>
       <FlatList
-        data={data}
+        data={see.see}
         renderItem={renderitem}
       />
     </View>

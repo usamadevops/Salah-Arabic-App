@@ -13,7 +13,7 @@ export default function Op3Stack(){
     return(
         <Stack.Navigator>
              <Stack.Screen
-        name="Op1"
+        name="smell"
         options={{
           header: ({ navigation }) => (
             <OptionsHeader name={'التشخيص'}  navigation={navigation}/>

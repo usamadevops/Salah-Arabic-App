@@ -13,7 +13,6 @@ import Op3 from '../../../assets/images/ما هي الرائحة.svg';
 import Op4 from '../../../assets/images/ما هو شعورك؟.svg';
 import Op5 from '../../../assets/images/لن تبدأ السيارة؟.svg';
 import colors from '../../../Contants/colors';
-
 const screenWidth = Dimensions.get('screen').width * 0.9;
 const screenHeight = Dimensions.get('screen').height * 0.13;
 const Home2 = ({ navigation }) => {
@@ -22,19 +21,20 @@ const Home2 = ({ navigation }) => {
       <View style={styles.container}>
         <Text style={styles.title}>تشخيص مشاكل سيارتك</Text>
         <Text style={styles.heading}>ما نوع الأعراض التي تعانيها؟</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Op1')}>
-          <Op1 width={screenWidth} height={screenHeight} />
+        <TouchableOpacity onPress={() => navigation.navigate('See')}>
+          <Op1 width={screenWidth} height={screenHeight}  />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Op2')}>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Hear')}>
           <Op2 width={screenWidth} height={screenHeight} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Op3')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Smell')}>
           <Op3 width={screenWidth} height={screenHeight} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Op4')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Feel')}>
           <Op4 width={screenWidth} height={screenHeight} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Op5')}>
+        <TouchableOpacity onPress={() => navigation.navigate('DontStart')}>
           <Op5 width={screenWidth} height={screenHeight} />
         </TouchableOpacity>
       </View>

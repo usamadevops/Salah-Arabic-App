@@ -13,7 +13,7 @@ export default function Op5Stack(){
     return(
         <Stack.Navigator>
              <Stack.Screen
-        name="Op1"
+        name="dontstart"
         options={{
           header: ({ navigation }) => (
             <OptionsHeader name={'التشخيص'}  navigation={navigation}/>

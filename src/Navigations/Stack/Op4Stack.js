@@ -13,7 +13,7 @@ export default function Op4Stack(){
     return(
         <Stack.Navigator>
              <Stack.Screen
-        name="Op1"
+        name="feel"
         options={{
           header: ({ navigation }) => (
             <OptionsHeader name={'التشخيص'}  navigation={navigation}/>

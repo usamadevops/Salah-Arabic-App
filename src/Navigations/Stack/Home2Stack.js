@@ -27,35 +27,35 @@ function Option1() {
         component={Screens.Dashobard.Home.Home2}
       />
       <Stack.Screen
-        name="Op1"
+        name="See"
         options={{
         headerShown:false
         }}
         component={Op1Stack}
       />
        <Stack.Screen
-        name="Op2"
+        name="Hear"
         options={{
           headerShown:false
           }}
           component={Op2Stack}
       />
        <Stack.Screen
-        name="Op3"
+        name="Smell"
         options={{
           headerShown:false
           }}
         component={Op3Stack}
       />
        <Stack.Screen
-        name="Op4"
+        name="Feel"
         options={{
           headerShown:false
           }}
         component={Op4Stack}
       />
        <Stack.Screen
-        name="Op5"
+        name="DontStart"
         options={{
           headerShown:false
           }}

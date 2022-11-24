@@ -4,9 +4,7 @@ import { View, Text, FlatList, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
 import * as Component from '../../../../Components';
 import colors from '../../../../Contants/colors';
-
 const screenWidth = Dimensions.get('screen').width;
-const screenHeight = Dimensions.get('screen').height;
 const Op2 = ({ navigation }) => {
   const data = [
     {

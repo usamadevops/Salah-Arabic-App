@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import { View, Text, TouchableOpacity, Dimensions, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Dimensions, StyleSheet, Alert } from 'react-native';
 import React from 'react';
 import { AntDesigne } from '../../Contants/Icon';
 import SettingIcon from '../../assets/images/GearIcon.svg';
@@ -9,33 +9,36 @@ import colors from '../../Contants/colors';
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 
-export default function Button({ navigation, name, screen, subtitle,fontSize,width ,icon}) {
+export default function Button({ navigation, name, screen,alert, subtitle,questions,fontSize,width ,icon}) {
     return (
-        <TouchableOpacity style={styles.main} onPress={() => navigation.navigate(screen)}>
+        <TouchableOpacity style={styles.main} onPress={() => {
+            if(questions===undefined){
+                Alert.alert(alert['text']);
+            }
+            else{
+            navigation.push(screen,{
+            title:name,
+            icon:icon,
+            subtitle:subtitle,
+            data:questions,
+        })}}}>
             <View style={styles.icons}>
                 <View style={{marginRight:10}}>
                 <AntDesigne icon={'caretleft'} color={colors.prinamry} size={18}  />
                 </View>
-
-                <SettingIcon height={35} width={35} />
+                {
+                    icon!==null && <SettingIcon height={35} width={35} />
+                }
+                
             </View>
             <View style={{ flex:1,  alignItems: 'flex-end', justifyContent:'center', paddingVertical:13}}>
-
-            {subtitle ?
-            <>
-                    <Text style={{ fontSize: 10, color:'#990404' }}>{subtitle}</Text>
-                    <Text
-                        style={{ fontSize: 16, fontWeight: 'bold', color: '#8F8E8E', alignItems: 'flex-end' }}>
-                        {name}
-                    </Text>
-                    </>  
-                :
+          
                 <Text
                     style={{ flex:1,fontSize: fontSize || 14, fontWeight: 'bold', color: '#8F8E8E', right: screenWidth * 0.1, alignItems: 'flex-end',width:width||null }}>
                     {name}
                 </Text>
                 
-            }
+            
 </View>
         </TouchableOpacity>
     );

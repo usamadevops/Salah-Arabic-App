@@ -3,12 +3,24 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+{/* <TouchableOpacity onPress={()=>navigation.navigate('Home2Stack')}>
+ <Text>Home2</Text>
+</TouchableOpacity> */}
 const Home1 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-     <TouchableOpacity onPress={()=>navigation.navigate('Home2Stack')}>
-      <Text>Home2</Text>
-     </TouchableOpacity>
+     {/* Upper Section */}
+     <View>
+     </View>
+     {/* middle Section */}
+     <View>
+     </View>
+     {/* After middle Section */}
+     <View>
+     </View>
+     {/*Bottom Section */}
+     <View>
+     </View>
     </SafeAreaView>
   );
 };

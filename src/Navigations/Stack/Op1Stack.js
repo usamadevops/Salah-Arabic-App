@@ -8,6 +8,7 @@ import OptionsHeader from '../../Components/header/OptionsHeader';
 import Questions from '../../Components/Question';
 import Questions2 from '../../Components/Question2';
 import Questions3 from '../../Components/Question3';
+import Questions4 from '../../Components/Question4';
 
 const Stack = createNativeStackNavigator();
 
@@ -50,15 +51,15 @@ export default function Op1Stack() {
         }}
         component={Questions3}
       />
-       {/* <Stack.Screen
-        name=" درجة حرارة المحرك"
+       <Stack.Screen
+        name="Questions4"
         options={{
           header: ({ navigation }) => (
             <OptionsHeader name={'التشخيص'} navigation={navigation} />
           ),
         }}
-        component={Questions}
-      /> */}
+        component={Questions4}
+      />
 
     </Stack.Navigator>
   );

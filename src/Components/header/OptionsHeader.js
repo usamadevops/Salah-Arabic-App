@@ -7,11 +7,10 @@ import SettingIcon from '../../assets/images/Icon-feather-settings.svg';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const screenWidth = Dimensions.get('screen').width;
-const screenHeight = Dimensions.get('screen').height;
 
 const  OptionsHeader =({ navigation, name, showIcon, icon })=> {
   return (
-    <SafeAreaView style={{ flexDirection: 'row', alignItems: 'center' }}>
+    <SafeAreaView style={{ flexDirection: 'row',height:110, alignItems: 'center' }}>
       {icon == null ? <TouchableOpacity onPress={() => navigation.goBack()}>
         <Entypoo icon={'chevron-small-left'} color={'gray'} size={45} />
       </TouchableOpacity> :<View style={{marginLeft:15}}/>}

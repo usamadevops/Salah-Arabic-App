@@ -20,6 +20,7 @@ function App() {
         }}
         name="Home1" component={Screens.Dashobard.Home.Home1} 
         />
+        
       <Stack.Screen
         name="Home2Stack"
         options={{

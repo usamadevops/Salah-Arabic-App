@@ -1,8 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import {View, Text, TextInput, StyleSheet, Dimensions} from 'react-native';
 import React from 'react';
-import colors from '../../Contants/colors';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 const LoginInput = props => {
   return (
@@ -13,7 +11,7 @@ const LoginInput = props => {
         onChangeText={props.onChangeText}
         style={styles.input}
       />
-      <Icon name="home" color={colors.background} size={40} />
+      {props.icon}
     </View>
   );
 };
@@ -23,7 +21,7 @@ export default LoginInput;
 const styles = StyleSheet.create({
   input: {
     textAlign: 'center',
-    height: Dimensions.get('screen').height * 0.09,
+    height:60,
     width: Dimensions.get('screen').width * 0.7,
     fontSize:17,
     fontFamily:'Segoe UI'

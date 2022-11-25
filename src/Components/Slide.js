@@ -5,15 +5,15 @@ const { width, height } = Dimensions.get('window');
 const Slide = ({ item }) => {
     console.log(width, height)
     return (
-        <View style={{ flex: 1, backgroundColor: '#FEFDFD', width: width, paddingHorizontal: 24 }}>
+        <View style={{ flex: 1, backgroundColor: '#FEFDFD', width: width, paddingHorizontal: 24,alignItems:'center',paddingVertical:16 }}>
             <View >
                 {item.pic}
             </View>
-            <View style={{ marginTop: 8 }}>
-                <Text style={{ fontFamily: 'futura', fontSize: 16, fontWeight: 'bold' }}>
+            <View style={{ marginTop: 36 }}>
+                <Text style={{ fontFamily: 'futura', fontSize: 24, fontWeight: 'bold' }}>
                     {item.heading}
                 </Text>
-                <Text style={{ fontFamily: 'futura', fontSize: 14, fontWeight: '200', marginTop: 16, lineHeight: 24, color: '#0f0f0f' }} textBreakStrategy="balanced">
+                <Text style={{ fontFamily: 'futura', fontSize: 14, fontWeight: '200', marginTop: 16, lineHeight: 24,  }} textBreakStrategy="balanced">
                     {item.sentence1}
                 </Text>
                 {item.sentence2 !== '' &&

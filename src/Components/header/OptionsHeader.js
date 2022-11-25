@@ -13,7 +13,7 @@ const  OptionsHeader =({ navigation, name, showIcon, icon })=> {
   return (
     <SafeAreaView style={{ flexDirection: 'row', alignItems: 'center',justifyContent:"space-evenly",backgroundColor:'#FEFDFD',height:80 }}>
       {icon !== null ?
-       <TouchableOpacity onPress={() => navigation.goBack()} style={{padding:10}}>
+       <TouchableOpacity onPress={() => navigation.goBack()} style={{flex:1,padding:10}}>
        <Back />
       </TouchableOpacity> :<View style={{marginLeft:15}}/>
       }
@@ -22,7 +22,7 @@ const  OptionsHeader =({ navigation, name, showIcon, icon })=> {
       <Image source={require('../../assets/images/Group71.png')} />
       </View>
     
-    <View style={{flex:3}}>
+    <View style={{flex:5}}>
         <Text
         style={{ fontSize: 20, color: 'black' }}>
         {name}

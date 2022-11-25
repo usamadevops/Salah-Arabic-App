@@ -4,33 +4,21 @@ import { View, Text, FlatList, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
 import * as Component from '../../../../Components';
 import colors from '../../../../Contants/colors';
-
+import smell from '../../../../data/Smell.json';
 const screenWidth = Dimensions.get('screen').width;
-const screenHeight = Dimensions.get('screen').height;
 const Op3 = ({ navigation }) => {
-  const data = [
-    {
-      name: 'رائحة البيض الفاسد ',
-      screen: 'رائحة البيض الفاسد '
-    },
-    {
-      name: 'رائحة ​​من فتحات التكييف  إلى جانب التبريد السيئ',
-      screen: 'رائحة ​​من فتحات التكييف  إلى جانب التبريد السيئ',
-      fontSize:13,
-      width:screenWidth * 0.01
-    },
-  ];
   const renderitem = ({ item }) => {
-    return <Component.Button.Button name={item.name} navigation={navigation} screen={item.screen} fontSize={item.fontSize} width={item.width}/>;
+    return <Component.Button.Button name={item.title} navigation={navigation} questions={item.questions_1} alert={item.alert} subtitle={item.Subtitle} screen={'questions'} />;
   }
   return (
+   
     <View style={styles.container}>
       <View style={{marginRight:screenWidth * 0.1}}>
-        <Text style={styles.title}>ما هي الرائحة التي تشمها؟</Text>
-        <Text style={styles.heading}>ماذا تشم؟</Text>
+        <Text style={styles.title}> {smell.header}</Text>
+        <Text style={styles.heading}>{smell.header}</Text>
       </View>
       <FlatList
-        data={data}
+        data={smell.smell}
         renderItem={renderitem}
       />
     </View>
@@ -50,15 +38,16 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 25,
+    left:170
   },
   title: {
     textAlign: 'center',
-    right: '25%',
+    left: 10,
     fontSize: 25,
     fontWeight: 'bold',
-    marginBottom: 40,
-    color: colors.background,
-    // marginRight:screenWidth * 0.4
+    marginBottom: 20,
+    color: '#8F8E8E',
+    marginRight:screenWidth * 0.4
   },
 });

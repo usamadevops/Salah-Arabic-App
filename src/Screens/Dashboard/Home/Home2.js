@@ -21,20 +21,20 @@ const Home2 = ({ navigation }) => {
       <View style={styles.container}>
         <Text style={styles.title}>تشخيص مشاكل سيارتك</Text>
         <Text style={styles.heading}>ما نوع الأعراض التي تعانيها؟</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('See')}>
+        <TouchableOpacity onPress={() => navigation.navigate('eye')}>
           <Op1 width={screenWidth} height={screenHeight}  />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Hear')}>
+        <TouchableOpacity onPress={() => navigation.navigate('hear')}>
           <Op2 width={screenWidth} height={screenHeight} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Smell')}>
+        <TouchableOpacity onPress={() => navigation.navigate('smell')}>
           <Op3 width={screenWidth} height={screenHeight} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Feel')}>
+        <TouchableOpacity onPress={() => navigation.navigate('feel')}>
           <Op4 width={screenWidth} height={screenHeight} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('DontStart')}>
+        <TouchableOpacity onPress={() => navigation.navigate('donts3tart')}>
           <Op5 width={screenWidth} height={screenHeight} />
         </TouchableOpacity>
       </View>

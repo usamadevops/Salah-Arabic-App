@@ -12,9 +12,18 @@ import Questions4 from '../../Components/Question4';
 
 const Stack = createNativeStackNavigator();
 
-export default function Op1Stack() {
+export default function InstructionsStack() {
   return (
     <Stack.Navigator>
+        <Stack.Screen
+        name="Home2"
+        options={{
+          header: ({ navigation }) => (
+            <OptionsHeader name={'التشخيص'}  navigation={navigation} showIcon={true} icon={'back'} />
+          ),
+        }}
+        component={Screens.Dashobard.Home.Home2}
+      />
       <Stack.Screen
         name="eye"
         options={{
@@ -23,6 +32,42 @@ export default function Op1Stack() {
           ),
         }}
         component={Screens.Dashobard.Options.Op1.Op1}
+      />
+       <Stack.Screen
+        name="hear"
+        options={{
+          header: ({ navigation }) => (
+            <OptionsHeader name={'التشخيص'} navigation={navigation} />
+          ),
+        }}
+        component={Screens.Dashobard.Options.Op2.Op2}
+      />
+            <Stack.Screen
+        name="smell"
+        options={{
+          header: ({ navigation }) => (
+            <OptionsHeader name={'التشخيص'}  navigation={navigation}/>
+          ),
+        }}
+        component={Screens.Dashobard.Options.Op3.Op3}
+      />
+             <Stack.Screen
+        name="feel"
+        options={{
+          header: ({ navigation }) => (
+            <OptionsHeader name={'التشخيص'}  navigation={navigation}/>
+          ),
+        }}
+        component={Screens.Dashobard.Options.Op4.Op4}
+      />
+            <Stack.Screen
+        name="dontstart"
+        options={{
+          header: ({ navigation }) => (
+            <OptionsHeader name={'التشخيص'}  navigation={navigation}/>
+          ),
+        }}
+        component={Screens.Dashobard.Options.Op5.Op5}
       />
       <Stack.Screen
         name="questions"

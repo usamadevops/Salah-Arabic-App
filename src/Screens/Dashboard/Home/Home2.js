@@ -45,7 +45,7 @@ const Home2 = ({ navigation }) => {
           <Text style={{color:'#fff',fontSize:20}}>ما هو شعورك؟ </Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('donts3tart')}>
+        <TouchableOpacity onPress={() => navigation.navigate('dontstart')}>
           <Op5 width={screenWidth} height={screenHeight} />
           <View style={{position:'absolute',top:45,right:100}}>
           <Text style={{color:'#fff',fontSize:20}}> لن تبدأ السيارة؟</Text>

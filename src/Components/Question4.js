@@ -10,7 +10,7 @@ import {
   import colors from '../Contants/colors'
   const screenWidth = Dimensions.get('screen').width;
   
-  const Questions4 = ({ navigation,title,subtitle,questions,route }) => {
+  const Questions4 = ({ navigation,title,subtitle,route }) => {
     const {data}=route.params;
     return (
       <ScrollView style={{ flex: 1 }}>

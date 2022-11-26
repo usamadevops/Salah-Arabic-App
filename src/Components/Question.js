@@ -12,7 +12,6 @@ const screenWidth = Dimensions.get('screen').width;
 
 const Questions = ({ navigation, route }) => {
   const { data, title, subtitle, icon } = route.params;
-  console.log('daa', data)
   return (
     <ScrollView style={{ flex: 1 }}>
 

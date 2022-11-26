@@ -17,25 +17,39 @@ const screenWidth = Dimensions.get('screen').width * 0.9;
 const screenHeight = Dimensions.get('screen').height * 0.13;
 const Home2 = ({ navigation }) => {
   return (
-    <ScrollView>
+    <ScrollView style={{flex:1, backgroundColor:'#f5f5f5'}}>
       <View style={styles.container}>
         <Text style={styles.title}>تشخيص مشاكل سيارتك</Text>
         <Text style={styles.heading}>ما نوع الأعراض التي تعانيها؟</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('See')}>
+        <TouchableOpacity onPress={() => navigation.navigate('eye')}>
           <Op1 width={screenWidth} height={screenHeight}  />
+          <View style={{position:'absolute',top:45,right:100}}>
+          <Text style={{color:'#fff',fontSize:20}}>ماذا ترى؟</Text>
+          </View>
         </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => navigation.navigate('Hear')}>
+        <TouchableOpacity onPress={() => navigation.navigate('hear')}>
           <Op2 width={screenWidth} height={screenHeight} />
+          <View style={{position:'absolute',top:45,right:100}}>
+          <Text style={{color:'#fff',fontSize:20}}> ماذا تسمع؟</Text>
+          </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Smell')}>
+        <TouchableOpacity onPress={() => navigation.navigate('smell')}>
           <Op3 width={screenWidth} height={screenHeight} />
+          <View style={{position:'absolute',top:35,right:100,width:'40%'}}>
+          <Text style={{color:'#fff',fontSize:20}}>ما هي الرائحة التي تشمها؟</Text>
+          </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Feel')}>
+        <TouchableOpacity onPress={() => navigation.navigate('feel')}>
           <Op4 width={screenWidth} height={screenHeight} />
+          <View style={{position:'absolute',top:45,right:100}}>
+          <Text style={{color:'#fff',fontSize:20}}>ما هو شعورك؟ </Text>
+          </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('DontStart')}>
+        <TouchableOpacity onPress={() => navigation.navigate('donts3tart')}>
           <Op5 width={screenWidth} height={screenHeight} />
+          <View style={{position:'absolute',top:45,right:100}}>
+          <Text style={{color:'#fff',fontSize:20}}> لن تبدأ السيارة؟</Text>
+          </View>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -50,6 +64,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     flexDirection: 'column',
     paddingHorizontal: 10,
+    backgroundColor:'#f5f5f5'
   },
   heading: {
     fontWeight: 'bold',

@@ -7,13 +7,13 @@ export const TutorialList = ({navigation}) => {
       {/* Card Layout */}
       {TutorialData.map((items, index) => {
         return (
-          <TouchableOpacity style={{ width: '44%',  backgroundColor: "#CF5300", borderRadius: 10 ,margin:10,padding:10,alignItems:'center',justifyContent:"center"}}
+          <TouchableOpacity style={{ width: '44%',  backgroundColor: "#CF5300", borderRadius: 10 ,marginHorizontal:10,marginVertical:20,padding:15,alignItems:'center',justifyContent:"center"}}
           onPress={()=>navigation.navigate('viewtutorial',{
             data:items
           })}
           key={index}
           >
-            <View style={{marginBottom:4}}>
+            <View style={{marginBottom:16}}>
               {items.pic}
             </View>
             <Text style={{color:'#fff',fontWeight:'bold',fontSize:16}}>

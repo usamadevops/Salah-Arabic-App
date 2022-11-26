@@ -5,6 +5,7 @@ export const Viewtutorial = ({ navigation, route }) => {
   const { data } = route.params;
   return (
     <View style={{ flex: 1,paddingHorizontal:10,alignItems:'center' }}>
+        <View style={{position:'absolute',width:250,height:250,borderRadius:200,backgroundColor:'#f5f5f5'}}/>
       <View style={{ flex: 1 ,flexDirection:'row',alignItems:'center',justifyContent:"space-evenly"}}>
         <View style={{padding:40}}>
           {data.pic}

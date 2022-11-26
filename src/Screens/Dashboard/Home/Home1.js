@@ -53,18 +53,19 @@ const Home1 = ({ navigation }) => {
         </View>
       </View>
       {/* middle Section */}
-      <View style={{top:-25}}>
+      <View style={{top:-25,elevation:2}}>
         <TouchableOpacity
-          style={{ marginVertical: 10, backgroundColor: colors.prinamry, width: Dimensions.get('screen').width * 0.7, height: Dimensions.get('screen').height * 0.055, alignItems: 'center', justifyContent: 'center', borderRadius: 40 }}
+        activeOpacity={0.7}
+          style={{ marginVertical: 10, backgroundColor: colors.prinamry, width: Dimensions.get('screen').width * 0.7, height: Dimensions.get('screen').height * 0.055, alignItems: 'center', justifyContent: 'center', borderRadius: 40,elevation:2 }}
           onPress={() => navigation.navigate('Home2Stack')}
         >
           <Text style={{ color: colors.secondary, fontSize: 16 }}>لنصلح سيارتك</Text>
         </TouchableOpacity>
 
       </View>
-      <TouchableOpacity style={{ flex:Platform.OS==='ios'? 0.2:0.18, width: '100%', alignItems: 'center' }}
+      <TouchableOpacity style={{ flex:Platform.OS==='ios'? 0.2:0.18, width: '100%', alignItems: 'center', }}
       >
-        <View style={{ width: '90%', height: '100%', backgroundColor: '#ffffff', zIndex: 10, borderRadius: 10 }}>
+        <View style={{ width: '90%', height: '100%', backgroundColor: '#ffffff', zIndex: 10, borderRadius: 10,elevation:2 }}>
           <View style={{ right: 30, position: 'absolute',top:Platform.OS==='ios'?0:10 }}>
             <Text >
               اعتني بسيارتك
@@ -86,7 +87,7 @@ const Home1 = ({ navigation }) => {
             onPress={()=>showAlert()}
             activeOpacity={0.7}
       >
-        <View style={{ width: '90%', height: '100%', backgroundColor: '#ffffff', zIndex: 10, borderRadius: 10 }}>
+        <View style={{ width: '90%', height: '100%', backgroundColor: '#ffffff', zIndex: 10, borderRadius: 10,elevation:2 }}>
           <View style={{ right: 30, position: 'absolute',top:Platform.OS==='ios'?0:10 }}>
             <Text style={{ fontSize: 14 }}>
               <Text style={{ fontSize: 12, color: '#8F8E8E' }}>
@@ -97,7 +98,6 @@ const Home1 = ({ navigation }) => {
           </View>
         </View>
         <View style={{ height: 5, width: '100%', position: 'absolute', alignItems: 'center', justifyContent: 'center', top: '50%', zIndex: -1, backgroundColor: colors.prinamry }} />
-
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#D5D3D330'
+    backgroundColor: '#f5f5f5'
 
   },
 });

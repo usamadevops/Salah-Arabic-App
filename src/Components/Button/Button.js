@@ -21,6 +21,7 @@ export default function Button({ navigation, name, screen, alert, subtitle, ques
                           text: "موافق",
                           style: "default",
                         },
+                        Platform.OS==='android' &&
                         {
                             text: "                                                                     ",
                             style: "default",   
@@ -41,7 +42,6 @@ export default function Button({ navigation, name, screen, alert, subtitle, ques
             <View style={styles.icons}>
                 <View style={{ marginRight: 10 }}>
                     <Backfill />
-                    {/* <AntDesigne icon={'caretleft'} color={colors.prinamry} size={18} /> */}
                 </View>
                 {
                     icon !== null && <SettingIcon height={35} width={35} />
@@ -53,6 +53,7 @@ export default function Button({ navigation, name, screen, alert, subtitle, ques
                 <Text
                     style={{ flex: 1, fontSize: fontSize || 14, fontWeight: 'bold', color: '#8F8E8E', right: screenWidth * 0.1, alignItems: 'flex-end', width: width || null }}>
                     {name}
+                  
                 </Text>
 
 

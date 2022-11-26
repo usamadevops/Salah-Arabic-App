@@ -9,11 +9,13 @@ export const Prepurchase = () => {
   const ref = React.useRef(null);
   const Footer = () => {
     return (
-      <View style={{marginBottom: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', }}>
-        <View style={{flex: 1,left:50 }}>
+      <View style={{marginVertical: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', }}>
+        <View style={{flex: 1,justifyContent:'flex-start',alignItems:'flex-end' }}>
           {
             currentSlideIndex != 0 ? (
-              <Pressable onPress={() => PreviousSlide()}>
+              <Pressable onPress={() => PreviousSlide()} style={{padding:10}} 
+              android_ripple={{borderless:true,radius:30,color:'#c4c4c4'}}
+              >
                 <Text style={{color:'#000000'}}>السابق</Text>
               </Pressable>
 
@@ -30,10 +32,12 @@ export const Prepurchase = () => {
             )
           }
         </View>
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1 ,justifyContent:'flex-start',alignItems:'flex-start'}}>
           {currentSlideIndex !== PrepurchaseData.length - 1 ?
             (
-              <Pressable onPress={() => NextSlide()}>
+              <Pressable onPress={() => NextSlide()} style={{padding:10}}
+              android_ripple={{borderless:true,radius:30,color:'#c4c4c4'}}
+              >
                 <Text style={{color:'#000'}}>التالي</Text>
               </Pressable>
             ) : (

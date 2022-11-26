@@ -5,6 +5,10 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import colors from '../../../Contants/colors';
 import * as Components from '../../../Components';
+import Lock from '../../../assets/svg/lock.svg';
+import Mail from '../../../assets/svg/mail.svg';
+import User from '../../../assets/svg/user.svg';
+
 import {Authorize} from '../../../redux/Modules/Auth';
 const SplashScreen = ({ navigation }) => {
     const dispatch = useDispatch();
@@ -27,20 +31,20 @@ const SplashScreen = ({ navigation }) => {
             />
             <View style={styles.body}>
                 <View style={styles.input}>
-                    <Components.Input.LoginInput placeholder={'الاسم الكامل'} />
-                    <Components.Input.LoginInput placeholder={'البريد الإلكتروني'}  />
-                    <Components.Input.LoginInput placeholder={'كلمه السر'} />
+                    <Components.Input.LoginInput placeholder={'الاسم الكامل'}  icon={<User/>}/>
+                    <Components.Input.LoginInput placeholder={'البريد الإلكتروني'}  icon={<Mail/>} />
+                    <Components.Input.LoginInput placeholder={'كلمه السر'}  icon={<Lock/>}/>
                 </View>
                 <TouchableOpacity
-                    style={{ marginVertical: 30, backgroundColor: colors.prinamry, width: Dimensions.get('screen').width * 0.5, height: Dimensions.get('screen').height * 0.06, alignItems: 'center', justifyContent: 'center', borderRadius: 20 }}
+                    style={{ marginVertical: 30, backgroundColor: colors.prinamry, width: Dimensions.get('screen').width * 0.6, height: Dimensions.get('screen').height * 0.06, alignItems: 'center', justifyContent: 'center', borderRadius: 40 }}
                     onPress={()=>dispatch(Authorize())}
                 >
                     <Text style={{ color: colors.secondary }}>اشتراك</Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.footer}>
-                <Text style={styles.footer_Title}>سجل في</Text>
-                <Text>هل لديك حساب؟ </Text>
+                <Text style={{color:'#AB0404',fontWeight:'bold'}}>سجل في</Text>
+                <Text >هل لديك حساب؟ </Text>
             </View>
         </View>
     );
@@ -123,8 +127,8 @@ const styles = StyleSheet.create({
         left: 45,
         // position:'absolute',
         backgroundColor: 'white',
-        height: Dimensions.get('screen').height / 3.2,
-        width: Dimensions.get('screen').width * 0.6,
+        height: Dimensions.get('screen').width * 0.7,
+        width: Dimensions.get('screen').width * 0.7,
         opacity: 0.2,
         borderRadius: 550,
         shadowColor: "#000",

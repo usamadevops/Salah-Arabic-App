@@ -24,7 +24,7 @@ const Questions = ({ navigation, route }) => {
         {data && data.map((q, index) => {
           return (
             <View key={index}>
-              <Component.Button.Button name={q.text} questions={q.questions_3} subtitle={q.Subtitle} navigation={navigation} alert={q.alert} screen={'questions3'} icon={q.icon} />
+              <Component.Button.Button name={q.text} questions={q.questions_4} subtitle={q.Subtitle} navigation={navigation} alert={q.alert} screen={'questions3'} icon={q.icon} />
             </View>
           )
         })}

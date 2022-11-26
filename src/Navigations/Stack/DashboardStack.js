@@ -5,7 +5,7 @@ import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Screens from '../../Screens';
 import OptionsHeader  from '../../Components/header/OptionsHeader';
-import Home2Stack from './Home2Stack';
+import InstructionsStack from './InstructionsStack';
 
 const Stack = createNativeStackNavigator();
 
@@ -58,7 +58,7 @@ function App() {
         options={{
           headerShown: false,
         }}
-        component={Home2Stack}
+        component={InstructionsStack}
       />
     </Stack.Navigator>
   );

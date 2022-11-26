@@ -3,7 +3,6 @@ import React from 'react'
 const { width, height } = Dimensions.get('window');
 
 const Slide = ({ item }) => {
-    console.log(width, height)
     return (
         <View style={{ flex: 1, backgroundColor: '#FEFDFD', width: width, paddingHorizontal: 24,alignItems:'center',paddingVertical:16 }}>
             <View >

@@ -4,46 +4,12 @@ import { View, Text, FlatList, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
 import * as Component from '../../../../Components';
 import colors from '../../../../Contants/colors';
+import Hear from '../../../../data/Hear.json';
 const screenWidth = Dimensions.get('screen').width;
 const Op2 = ({ navigation }) => {
-  const data = [
-    {
-      name: 'صوت نقر',
-      screen: 'صوت نقر'
-    },
-    {
-      name: 'صوت طقطقة',
-      screen: 'صوت طقطقة'
-    },
-    {
-      name: 'الفرامل تصدر ضوضاء',
-      screen: 'الفرامل تصدر ضوضاء'
-    },
-    {
-      name: 'تفتفة المحرك او شرقان',
-      screen: 'تفتفة المحرك او شرقان',
-      subtitle:'Sputter and cough'
-    },
-    {
-      name: '(الوخز /التنصت'+')',
-      screen: 'الوخز /التنصت'+')',
-      subtitle:'Ticking / Tapping'
-    },
-    {
-      name: 'فرقعة بالمحرك (انفجارات)',
-      screen: 'فرقعة بالمحرك (انفجارات)'
-    },
-    {
-      name: 'المحرك يعمل بشكل خشن',
-      screen: 'المحرك يعمل بشكل خشن'
-    },
-    {
-      name: 'طقطقة',
-      screen: 'طقطقة'
-    },
-  ];
+
   const renderitem = ({ item }) => {
-    return <Component.Button.Button name={item.name} navigation={navigation} screen={item.screen} subtitle={item.subtitle} />;
+    return <Component.Button.Button name={item.title} navigation={navigation} questions={item.questions_1} alert={item.alert} subtitle={item.Subtitle} screen={'questions'} />;
   }
   return (
     <View style={styles.container}>
@@ -51,10 +17,10 @@ const Op2 = ({ navigation }) => {
         ListHeaderComponent={(
           <View style={{ marginHorizontal: screenWidth * 0.11 }}>
             <Text style={styles.title}>ماذا تسمع؟</Text>
-            <Text style={styles.heading}>ماذا تسمع؟</Text>
+            <Text style={styles.heading}> {Hear.header}</Text>
           </View>
         )}
-        data={data}
+        data={Hear.hear}
         renderItem={renderitem}
       />
     </View>

@@ -170,6 +170,7 @@ android {
                 }
             }
         }
+        
     }
 
     if (isNewArchitectureEnabled()) {
@@ -221,6 +222,7 @@ android {
             include (*reactNativeArchitectures())
         }
     }
+    
     signingConfigs {
         debug {
             storeFile file('debug.keystore')

@@ -13,7 +13,7 @@ const screenWidth = Dimensions.get('screen').width;
 const Questions = ({ navigation, route }) => {
   const { data, title, subtitle, icon } = route.params;
   return (
-    <ScrollView style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1,paddingVertical:16 }}>
 
       <View style={styles.container}>
         <View style={{ marginRight: screenWidth * 0.6 }}>
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
   heading: {
     fontWeight: 'bold',
     fontSize: 20,
+    marginHorizontal:16
   },
   title: {
     textAlign: 'center',

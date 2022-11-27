@@ -11,7 +11,7 @@ function App() {
   return (
     <Stack.Navigator screenOptions={{ 
       cardStyleInterpolator: forSlide, 
-    animationEnabled: true, animationTypeForReplace: 'push', gestureEnabled: true, gestureDirection: 'horizontal' }}>
+    animationEnabled: true, animationTypeForReplace: 'push', gestureDirection: 'horizontal' }}>
       <Stack.Screen
         options={{
           header: ({ navigation }) => {

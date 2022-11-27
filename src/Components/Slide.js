@@ -1,10 +1,12 @@
-import { View, Text, Dimensions } from 'react-native'
+import { View, Text, Dimensions, ScrollView } from 'react-native'
 import React from 'react'
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('screen');
 
 const Slide = ({ item }) => {
+console.log(height);
     return (
-        <View style={{ flex: 1, backgroundColor: '#FEFDFD', width: width, paddingHorizontal: 24,alignItems:'center',paddingVertical:16 }}>
+        <ScrollView  nestedScrollEnabled horizontal={false} style={{flex:1}} >
+        <View style={{flex:1,marginBottom:height<700?height*0.3:height<600?height*0.4:0.1,backgroundColor: '#FEFDFD', width: width, paddingHorizontal: 24,alignItems:'center',paddingVertical:16 }}>
             <View >
                 {item.pic}
             </View>
@@ -25,6 +27,7 @@ const Slide = ({ item }) => {
 
             </View>
         </View>
+        </ScrollView>
     )
 }
 

@@ -22,7 +22,7 @@ const  OptionsHeader =({ navigation, name, showIcon, icon })=> {
       <Image source={require('../../assets/images/Group71.png')} />
       </View>
     
-    <View style={{flex:5}}>
+    <View style={{flex:5,marginLeft:48}}>
         <Text
         style={{ fontSize: 20, color: 'black' }}>
         {name}

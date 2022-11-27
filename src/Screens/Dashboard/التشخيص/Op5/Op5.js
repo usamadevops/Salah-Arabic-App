@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
   heading: {
     fontWeight: 'bold',
     fontSize: 20,
+    marginHorizontal:16
   },
   title: {
     textAlign: 'center',

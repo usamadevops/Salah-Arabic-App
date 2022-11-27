@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import { View, Text, FlatList, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Dimensions, ScrollView } from 'react-native';
 import React from 'react';
 import * as Component from '../../../../Components';
 import colors from '../../../../Contants/colors';
@@ -12,16 +12,24 @@ const Op5 = ({ navigation }) => {
     return <Component.Button.Button name={item.title} navigation={navigation} questions={item.questions_1} alert={item.alert} subtitle={item.Subtitle} screen={'questions'} />;
   }
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={{marginRight:screenWidth * 0.1}}>
         <Text style={styles.title}>لن تبدأ السيارة؟</Text>
         <Text style={styles.heading}>{DStart.header}</Text>
       </View>
-      <FlatList
+      {/* <FlatList
         data={DStart.dontstart}
+        // keyExtractor={Math.random(Math.floor(1000*1))}
         renderItem={renderitem}
-      />
-    </View>
+      /> */}
+      {
+        DStart.dontstart.map((item,index)=>{
+          return(
+            <Component.Button.Button name={item.title} navigation={navigation} questions={item.questions_1} alert={item.alert} subtitle={item.Subtitle} screen={'questions'} key={index}/>
+          )
+        })
+      }
+    </ScrollView>
   )
 }
 
@@ -30,7 +38,7 @@ export default Op5;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'flex-end',
+    // alignItems: 'flex-end',
     // justifyContent: 'center',
     flexDirection: 'column',
     // paddingHorizontal: 10,
@@ -42,11 +50,11 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    right: '25%',
+    right: 100,
+    top:10,
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 40,
-    color: colors.background,
-    marginRight:screenWidth * 0.3
+    color: '#c4c4c4',
   },
 });

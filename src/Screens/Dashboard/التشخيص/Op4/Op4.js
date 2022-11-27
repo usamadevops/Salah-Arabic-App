@@ -43,11 +43,11 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    right: '25%',
+    right: 100,
+    top:10,
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 40,
-    color: colors.background,
-    marginRight:screenWidth * 0.3
+    color: '#c4c4c4',
   },
 });

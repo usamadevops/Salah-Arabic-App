@@ -9,7 +9,10 @@ export const TutorialList = ({navigation}) => {
         return (
           <TouchableOpacity style={{ width: '44%',  backgroundColor: "#CF5300", borderRadius: 10 ,marginHorizontal:10,marginVertical:20,padding:15,alignItems:'center',justifyContent:"center"}}
           onPress={()=>navigation.navigate('viewtutorial',{
-            data:items
+            heading:items.heading,
+            pic:items.pic,
+            sentence1:items.sentence1,
+            sentence2:items.sentence2
           })}
           key={index}
           >

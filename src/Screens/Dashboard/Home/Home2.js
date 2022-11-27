@@ -18,6 +18,8 @@ const screenHeight = Dimensions.get('screen').height * 0.13;
 const Home2 = ({ navigation }) => {
   return (
     <ScrollView style={{flex:1, backgroundColor:'#f5f5f5'}}>
+              <View style={{position:'absolute',width:250,height:250,borderRadius:200,backgroundColor:'#f5f5f5'}}/>
+
       <View style={styles.container}>
         <Text style={styles.title}>تشخيص مشاكل سيارتك</Text>
         <Text style={styles.heading}>ما نوع الأعراض التي تعانيها؟</Text>

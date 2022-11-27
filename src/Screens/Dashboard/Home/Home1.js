@@ -43,7 +43,7 @@ const Home1 = ({ navigation }) => {
             [2020-2022]
           </Text>
         </View>
-        <View style={{ position: 'absolute', alignSelf: 'center', top: 10 }}>
+        <View style={{ position: 'absolute',  top: 10 }}>
           <Text style={{ fontSize: 24, color: 'black' }}>
             تشخيص مشاكل سيارتك
           </Text>

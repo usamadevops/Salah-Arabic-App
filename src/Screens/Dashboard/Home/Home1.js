@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions,Platform, Alert, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions,Platform, Alert, ScrollView, Pressable } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Home_car_bg from '../../../assets/svg/home/home_car_bg.svg';
@@ -7,11 +7,11 @@ import Home_car from '../../../assets/svg/home/home_car.svg';
 import Home_insurance from '../../../assets/svg/home/home_insurance.svg';
 import Home_settings from '../../../assets/svg/home/home_settings.svg';
 import Home_repair from '../../../assets/svg/home/home_repair.svg';
-import { Materiallconss } from '../../../Contants/Icon';
+import Edit from '../../../assets/svg/edit.svg'
 import colors from '../../../Contants/colors';
 import Card from '../../../Components/Card';
-const Home1 = ({ navigation }) => {
-
+const Home1 = ({ navigation,route }) => {
+const {car,model,year}=route.params
   const showAlert = () =>
   Alert.alert(
     "ما يجب أن تحمله كل مركبة",
@@ -30,18 +30,22 @@ const Home1 = ({ navigation }) => {
       {/* Upper Section */}
       <View style={{ flex:1, backgroundColor:'#f5f5f5',paddingTop:Dimensions.get('screen').height*0.1 }}>
         <Home_car_bg />
-        <View style={{ flex:0.5,position: "absolute", right: 50,  }}>
+        <View style={{ flex:1,position: "absolute", right: 50  }}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-            Nissan Maxima
-            {' '}
-            <Materiallconss icon={'edit'} size={18} color={'#8D8D8D'} />
+          {car!==null?car:'Nissan Maxima'}  
+            {' '} 
+            <Pressable onPress={()=>navigation.navigate('Dropdown')}
+            android_ripple={{borderless:true,radius:20,color:'#c4c4c4'}}
+            >
+            <Edit/>
+            </Pressable>
             {'   '}
             <Text style={{ fontSize: 16, fontWeight: "bold", color: '#8D8D8D', }}>
               سيارتك
             </Text>
           </Text>
           <Text>
-            [2020-2022]
+          {model!=='' &&year!==''?`[${model+ '-' +year}]`:[2020-2022]}  
           </Text>
         </View>
         <View style={{flex:0.5, position: 'absolute', left: 50, top: 50,alignSelf:'flex-start' }}>

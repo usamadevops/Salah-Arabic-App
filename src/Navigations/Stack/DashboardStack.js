@@ -4,12 +4,14 @@ import * as Screens from '../../Screens';
 import OptionsHeader from '../../Components/header/OptionsHeader';
 import InstructionsStack from './InstructionsStack';
 import { forSlide } from '../Animation';
+import CarDropdown from '../../Screens/Dashboard/CarDropdown';
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
-    <Stack.Navigator screenOptions={{ 
+    <Stack.Navigator >
+      <Stack.Group screenOptions={{ 
       cardStyleInterpolator: forSlide, 
     animationEnabled: true, animationTypeForReplace: 'push', gestureDirection: 'horizontal' }}>
       <Stack.Screen
@@ -66,6 +68,10 @@ function App() {
         }}
         component={InstructionsStack}
       />
+      </Stack.Group>
+      <Stack.Group screenOptions={{ presentation: 'modal' }}>
+        <Stack.Screen name="Dropdown" component={CarDropdown} options={{title:"اختر سيارتك",headerShown:false}}/>
+      </Stack.Group>
     </Stack.Navigator>
   );
 }

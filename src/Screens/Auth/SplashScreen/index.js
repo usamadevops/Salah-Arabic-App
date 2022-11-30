@@ -1,18 +1,17 @@
 /* eslint-disable prettier/prettier */
 import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import colors from '../../../Contants/colors';
 
-const SplashScreen = ({navigation}) => {
+const SplashScreen = ({ navigation }) => {
 
-    useEffect(()=> {
-            setTimeout(() =>  navigation.navigate('LoginScreen'), 1000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[]);
+    useEffect(() => {
+        setTimeout(() => navigation.navigate('LoginScreen'), 1000);
+    }, []);
 
     return (
         <View style={styles.container}>
-            <View style={{ position: 'absolute', flexDirection: 'row',  }}>
+            <View style={{ position: 'absolute', flexDirection: 'row', }}>
                 <View style={styles.circle2} >
                     <View style={styles.circle1} />
                 </View>
@@ -21,7 +20,6 @@ const SplashScreen = ({navigation}) => {
                 <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                     <View style={styles.logo}>
                         <Image
-                            // eslint-disable-next-line react-native/no-inline-styles
                             style={{
                                 position: 'absolute',
                                 width: '50%',
@@ -47,8 +45,6 @@ export default SplashScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // alignItems: 'center',
-        // justifyContent: 'center',
         backgroundColor: colors.prinamry,
         flexDirection: 'column',
         paddingHorizontal: 10
@@ -60,8 +56,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: colors.secondary,
-        // paddingHorizontal: 90,
-        // paddingVertical:80,
         height: '55%',
         width: '50%',
         borderRadius: 30
@@ -78,7 +72,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop:30
+        marginTop: 30
     },
     footer_Title: {
         color: '#C48519',
@@ -89,21 +83,18 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     circle1: {
-        bottom:45,
-        // paddingRight:10,
-        // paddingRight:100,
-        left:150,
-        position:'absolute',
+        bottom: 45,
+        left: 150,
+        position: 'absolute',
         backgroundColor: colors.secondary,
         height: Dimensions.get('screen').height / 3.5,
-        width: Dimensions.get('screen').width/1.5 ,
+        width: Dimensions.get('screen').width / 1.5,
         opacity: 0.5,
         borderRadius: 350
     },
     circle2: {
-        bottom:5,
-        left:45,
-        // position:'absolute',
+        bottom: 5,
+        left: 45,
         backgroundColor: colors.secondary,
         height: Dimensions.get('screen').height / 2.9,
         width: Dimensions.get('screen').width / 1.2,

@@ -7,13 +7,12 @@ import {
   } from 'react-native';
   import React from 'react';
   import  * as Component from '../Components'
-  import colors from '../Contants/colors'
   const screenWidth = Dimensions.get('screen').width;
   
   const Questions4 = ({ navigation,title,subtitle,route }) => {
     const {data}=route.params;
     return (
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView style={{ flex: 1,paddingVertical:16  }}>
 
       <View style={styles.container}>
         <View style={{ marginRight: screenWidth * 0.6 }}>

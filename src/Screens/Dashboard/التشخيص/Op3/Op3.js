@@ -3,7 +3,6 @@
 import { View, Text, FlatList, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
 import * as Component from '../../../../Components';
-import colors from '../../../../Contants/colors';
 import smell from '../../../../data/Smell.json';
 const screenWidth = Dimensions.get('screen').width;
 const Op3 = ({ navigation }) => {
@@ -39,15 +38,18 @@ const styles = StyleSheet.create({
   heading: {
     fontWeight: 'bold',
     fontSize: 25,
-    left:170
+    paddingHorizontal:0,
+    marginBottom:15
+
   },
   title: {
     textAlign: 'center',
-    left: 10,
+    right: 100,
+    top:10,
     fontSize: 25,
     fontWeight: 'bold',
-    marginBottom: 20,
-    color: '#8F8E8E',
-    marginRight:screenWidth * 0.4
+    marginBottom: 40,
+    color: '#c4c4c4',
+
   },
 });

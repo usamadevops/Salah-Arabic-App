@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity, ScrollView } from 'react-native';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import colors from '../../../Contants/colors';
@@ -13,7 +13,8 @@ import {Authorize} from '../../../redux/Modules/Auth';
 const SplashScreen = ({ navigation }) => {
     const dispatch = useDispatch();
     return (
-        <View style={styles.container}>
+        <ScrollView style={{   backgroundColor: 'lightgray',}}>
+            <View style={styles.container}>
             <View style={{ position: 'absolute', flexDirection: 'row', }}>
                 <View style={styles.circle2} >
                     <View style={styles.circle1} />
@@ -36,7 +37,7 @@ const SplashScreen = ({ navigation }) => {
                     <Components.Input.LoginInput placeholder={'كلمه السر'}  icon={<Lock/>}/>
                 </View>
                 <TouchableOpacity
-                    style={{ marginVertical: 30, backgroundColor: colors.prinamry, width: Dimensions.get('screen').width * 0.6, height: Dimensions.get('screen').height * 0.06, alignItems: 'center', justifyContent: 'center', borderRadius: 40 }}
+                    style={{ marginVertical: Dimensions.get('screen').height * 0.019, backgroundColor: colors.prinamry, width: Dimensions.get('screen').width * 0.6, height: Dimensions.get('screen').height * 0.08, alignItems: 'center', justifyContent: 'center', borderRadius: 40 }}
                     onPress={()=>dispatch(Authorize())}
                 >
                     <Text style={{ color: colors.secondary }}>اشتراك</Text>
@@ -46,7 +47,8 @@ const SplashScreen = ({ navigation }) => {
                 <Text style={{color:'#AB0404',fontWeight:'bold'}}>سجل في</Text>
                 <Text >هل لديك حساب؟ </Text>
             </View>
-        </View>
+            </View>
+        </ScrollView>
     );
 };
 
@@ -55,25 +57,22 @@ export default SplashScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // alignItems: 'center',
-        // justifyContent: 'center',
         backgroundColor: 'lightgray',
         flexDirection: 'column',
-        paddingHorizontal: 10
+        
+        paddingHorizontal: '5%',
+        paddingVertical:'5%'
     },
     body: {
-        marginTop: Dimensions.get('screen').height * 0.35,
+        marginTop: Dimensions.get('screen').height * 0.37,
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column'
-        // marginTop:Dimensions.get('screen') * 0.2
     },
     logo: {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: colors.secondary,
-        // paddingHorizontal: 90,
-        // paddingVertical:80,
         height: '55%',
         width: '50%',
         borderRadius: 30

@@ -2,26 +2,34 @@
 // In App.js in a new project
 
 import * as React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import * as Screens from '../../Screens';
 import OptionsHeader from '../../Components/header/OptionsHeader';
 import Questions from '../../Components/Question';
 import Questions2 from '../../Components/Question2';
 import Questions3 from '../../Components/Question3';
 import Questions4 from '../../Components/Question4';
-
-const Stack = createNativeStackNavigator();
+import {forSlide} from '../Animation';
+const Stack = createStackNavigator();
 
 export default function InstructionsStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator 
+    
+    screenOptions={{ 
+      cardStyleInterpolator:forSlide,
+      animationEnabled:true,animationTypeForReplace:'push',gestureEnabled:true ,gestureDirection:'horizontal'}}
+      
+      >
         <Stack.Screen
         name="Home2"
         options={{
           header: ({ navigation }) => (
             <OptionsHeader name={'التشخيص'}  navigation={navigation} showIcon={true} icon={'back'} />
           ),
-        }}
+        }
+      }
+      
         component={Screens.Dashobard.Home.Home2}
       />
       <Stack.Screen

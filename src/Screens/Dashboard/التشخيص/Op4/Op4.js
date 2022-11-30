@@ -40,14 +40,15 @@ const styles = StyleSheet.create({
   heading: {
     fontWeight: 'bold',
     fontSize: 20,
+    marginHorizontal:16
   },
   title: {
     textAlign: 'center',
-    right: '25%',
+    right: 100,
+    top:10,
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 40,
-    color: colors.background,
-    marginRight:screenWidth * 0.3
+    color: '#c4c4c4',
   },
 });

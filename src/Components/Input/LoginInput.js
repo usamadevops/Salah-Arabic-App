@@ -21,16 +21,16 @@ export default LoginInput;
 const styles = StyleSheet.create({
   input: {
     textAlign: 'center',
-    height:60,
+    height:Dimensions.get('screen').height * 0.08,
     width: Dimensions.get('screen').width * 0.7,
     fontSize:17,
     fontFamily:'Segoe UI'
   },
   textinput: {
     alignItems:'center',
-    paddingHorizontal: 10,
+    paddingHorizontal: Dimensions.get('screen').height * 0.009,
     flexDirection: 'row',
-    borderRadius: 20,
+    borderRadius: Dimensions.get('screen').height * 0.010,
     marginVertical: 10,
     borderWidth: 1,
     borderColor: '#D9D9D9',

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Dimensions, FlatList, Pressable } from 'react-native'
+import { Text, View, Dimensions, FlatList, Pressable, ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { InspectionData } from '../../../data/Inspection'
@@ -9,7 +9,7 @@ export const Inspection = () => {
   const ref = React.useRef(null);
   const Footer = () => {
     return (
-      <View style={{  marginVertical: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',  }}>
+      <View style={{  marginVertical: 20, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',  }}>
         <View style={{flex: 1,justifyContent:'flex-start',alignItems:'flex-end' }}>
           {
             currentSlideIndex != 0 ? (
@@ -70,23 +70,33 @@ export const Inspection = () => {
     }
   }
   return (
+
     <SafeAreaView style={{ flex: 1, backgroundColor: '#FEFDFD' }}>
       <FlatList data={InspectionData}
         onMomentumScrollEnd={(e) => updateCurrentIndex(e)}
         ref={ref}
         alwaysBounceHorizontal
+        pinchGestureEnabled={true}
         snapToAlignment='center'
         pagingEnabled={true}
         overScrollMode="auto"
+        nestedScrollEnabled={true}
         contentContainerStyle={{ height: height * 0.85, }}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
-        renderItem={({ item }) => <Slide item={item} 
-        />
+        scrollEnabled={true}
+        renderItem={({ item }) => {
+        return(
+          
+            <Slide item={item} />
+
+        )
+        }      
       }
       />
       <Footer />
     </SafeAreaView>
+
   )
 }
 

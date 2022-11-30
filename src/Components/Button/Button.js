@@ -48,14 +48,14 @@ export default function Button({ navigation, name, screen, alert, subtitle, ques
                 }
 
             </View>
-            <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center', paddingVertical: Platform.OS === 'ios' ? 8 : 16 }}>
-
+            <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center',  }}>
+<View style={{width:'80%'}}>
                 <Text
-                    style={{ flex: 1, fontSize: fontSize || 14, fontWeight: 'bold', color: '#8F8E8E', right: screenWidth * 0.1, alignItems: 'flex-end', width: width || null }}>
+                    style={{ fontSize: fontSize || 14, fontWeight: 'bold', color: '#8F8E8E', right: screenWidth * 0.1, alignItems: 'flex-end', width: width || null }}>
                     {name}
                   
                 </Text>
-
+                </View>
 
             </View>
         </TouchableOpacity>
@@ -66,14 +66,15 @@ const styles = StyleSheet.create({
     main: {
         flexDirection: 'row',
         alignItems: 'center',
-        alignContent: 'flex-end',
+        justifyContent:'center',
+       
         borderWidth: 0.5,
         borderColor: 'gray',
-        marginHorizontal: 20,
+      marginHorizontal:16,
         marginVertical: 8,
         borderRadius: 12,
-        height: screenHeight * 0.06,
-        width: screenWidth * 0.9,
+        height: screenHeight * 0.08,
+        width: screenWidth *0.9 ,
         backgroundColor: '#ECECEC',
         shadowColor: "#000",
         shadowOffset: {

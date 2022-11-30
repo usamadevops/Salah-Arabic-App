@@ -44,12 +44,13 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    right: '25%',
+    right: '20%',
+    top:10,
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 20,
     marginLeft:40,
-    color: colors.background,
+    color: '#c4c4c4',
     marginRight: screenWidth * 0.4
   },
 });

@@ -30,10 +30,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'flex-end',
-    // justifyContent: 'center',
     flexDirection: 'column',
-    // paddingHorizontal: 10,
-    // backgroundColor:colors.secondary
   },
   heading: {
     fontWeight: 'bold',

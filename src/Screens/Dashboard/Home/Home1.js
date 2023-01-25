@@ -32,7 +32,7 @@ const {car,model,year}=route.params
         <Home_car_bg />
         <View style={{ flex:1,position: "absolute", right: 50  }}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-          {car!==null?car:'Nissan Maxima'}  
+          {car}  
             {' '} 
             <Pressable onPress={()=>navigation.navigate('Dropdown')}
             android_ripple={{borderless:true,radius:20,color:'#c4c4c4'}}
@@ -45,7 +45,7 @@ const {car,model,year}=route.params
             </Text>
           </Text>
           <Text>
-          {model!=='' &&year!==''?`[${model+ '-' +year}]`:[2020-2022]}  
+          [{model+ '-' +year}]
           </Text>
         </View>
         <View style={{flex:0.5, position: 'absolute', left: 50, top: 50,alignSelf:'flex-start' }}>
@@ -83,7 +83,7 @@ const {car,model,year}=route.params
       </TouchableOpacity>
       {/* After middle Section */}
       <View style={{ flex: 3,marginVertical:24, flexDirection: 'row'}}>
-        <Card text={'التفتيش المنتظم'} icon_svg={<Home_insurance />} screen={'inspection'} />
+        <Card text={'فحص المركبة'} icon_svg={<Home_insurance />} screen={'inspection'} />
         <Card text={'الشراء المسبق'} icon_svg={<Home_repair />} screen={'prepurchase'} />
         <Card text={' دروس الإصلاح'} icon_svg={<Home_settings />} screen={'tutorialList'}/>
 

@@ -3,7 +3,6 @@
 import { View, Text, FlatList, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
 import * as Component from '../../../../Components';
-import colors from '../../../../Contants/colors';
 import Hear from '../../../../data/Hear.json';
 const screenWidth = Dimensions.get('screen').width;
 const Op2 = ({ navigation }) => {
@@ -33,10 +32,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'flex-end',
-    // justifyContent: 'center',
     flexDirection: 'column',
-    // paddingHorizontal: 10,
-    // backgroundColor:colors.secondary
   },
   heading: {
     fontWeight: 'bold',

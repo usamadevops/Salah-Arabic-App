@@ -15,6 +15,7 @@ function App() {
       cardStyleInterpolator: forSlide, 
     animationEnabled: true, animationTypeForReplace: 'push', gestureDirection: 'horizontal' }}>
       <Stack.Screen
+      initialParams={{car:'Nissan Maxima',model:'1999',year:'2000'}}
         options={{
           header: ({ navigation }) => {
             return <OptionsHeader name={'الصفحة الرئيسية'} navigation={navigation} icon={null} showIcon={true} />;

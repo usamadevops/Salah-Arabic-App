@@ -5,18 +5,18 @@ import DatePicker from 'react-native-date-picker';
 import { Vehicles, Model } from '../../data/DropdownMock';
 import colors from '../../Contants/colors';
 const CarDropdown = ({navigation}) => {
-  const [veh, setveh] = React.useState(Vehicles); 
-  const [vehmodal, setvehmodal] = React.useState(Model);
+  const [veh, setveh] = React.useState(''); 
+  const [vehmodal, setvehmodal] = React.useState('');
   const today = new Date();
   const [date, setDate] = React.useState(new Date())
-  const [Dateselected, setselected] = React.useState(false)
+  const [Dateselected, setselected] = React.useState(false);
   const [open, setOpen] = React.useState(false)
   return (
     <View style={{ flex: 1, backgroundColor: "#fff",paddingTop:40 }}>
       <View style={{ zIndex: 1000 }}>
-        <Dropdown data={veh} setData={setveh} defaultval={'Select your Car '} label={'Select Car'} />
+        <Dropdown data={Vehicles} setData={setveh} defaultval={'Select your Car '} label={'Select Car'} />
       </View>
-      <Dropdown data={vehmodal} setData={setvehmodal} defaultval={'Select your Car Model'} label={'Select Model'} />
+      <Dropdown data={Model} setData={setvehmodal} defaultval={'Select your Car Model'} label={'Select Model'} />
       <View style={{ marginTop: 10, marginHorizontal: 20 }}>
         <Text style={{ fontSize: 16, color: '#383838', fontWeight: '600' }}>
           Select Year
@@ -69,7 +69,7 @@ const CarDropdown = ({navigation}) => {
         activeOpacity={0.7}
           style={{ marginVertical: 10, backgroundColor: colors.prinamry, width: Dimensions.get('screen').width * 0.4, height: Dimensions.get('screen').height * 0.065, alignItems: 'center', justifyContent: 'center', borderRadius: 40,elevation:2,marginHorizontal:10 }}
           onPress={() => {
-            if(veh!=='' && vehmodal!==''&& date.getFullYear()!==today.getFullYear())
+            if(Dateselected && veh!=='' && vehmodal!=='')
           {  navigation.navigate('Home1',{
             car:veh,
             model:vehmodal,
